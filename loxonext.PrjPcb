@@ -84,13 +84,13 @@ GenerateClassCluster=0
 DocumentUniqueId=JINNOPHV
 
 [Document3]
-DocumentPath=..\..\..\..\pcbdesignlibs\alitumlib\canbus.SchDoc
+DocumentPath=canbus.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=0
+AnnotateOrder=4
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -98,7 +98,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=RSYPBXYX
+DocumentUniqueId=AWBXQDTL
 
 [Document4]
 DocumentPath=rs485.SchDoc
@@ -170,6 +170,23 @@ DocumentUniqueId=KXWNABEJ
 
 [Document8]
 DocumentPath=esp32-wroom-32.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document9]
+DocumentPath=canbus.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -1135,8 +1152,8 @@ UpdateToLatestRevision=1
 PartTypes=0
 ComponentLibIdentifierKind0=Library Name And Type
 ComponentLibraryIdentifier0=Sch_Lib.SchLib
-ComponentDesignItemID0=ESP32-WROOM-32
-ComponentSymbolReference0=ESP32-WROOM-32
+ComponentDesignItemID0=AO3401A
+ComponentSymbolReference0=AO3401A
 ComponentUpdate0=1
 ComponentIsDeviceSheet0=0
 FullReplace=1
@@ -1152,36 +1169,30 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
-ParameterName0=Availability
+ParameterName0=Check_prices
 ParameterUpdate0=1
-ParameterName1=Check_prices
+ParameterName1=Comment
 ParameterUpdate1=1
-ParameterName2=Comment
+ParameterName2=Component Kind
 ParameterUpdate2=1
-ParameterName3=Component Kind
+ParameterName3=Description
 ParameterUpdate3=1
-ParameterName4=Description
+ParameterName4=Library Reference
 ParameterUpdate4=1
-ParameterName5=Library Reference
+ParameterName5=MF
 ParameterUpdate5=1
-ParameterName6=MF
+ParameterName6=MP
 ParameterUpdate6=1
-ParameterName7=MP
+ParameterName7=Package
 ParameterUpdate7=1
-ParameterName8=Package
+ParameterName8=SnapEDA_Link
 ParameterUpdate8=1
-ParameterName9=Price
+ParameterName9=Value
 ParameterUpdate9=1
-ParameterName10=Purchase-URL
-ParameterUpdate10=1
-ParameterName11=SnapEDA_Link
-ParameterUpdate11=1
-ParameterName12=Value
-ParameterUpdate12=1
 ModelTypeGroup0=PCBLIB
 ModelTypeUpdate0=1
 ModelType0=PCBLIB
-ModelName0=MODULE_ESP32-WROOM-32
+ModelName0=SOT23
 ModelUpdate0=1
 
 [DatabaseUpdateOptions]
@@ -1200,33 +1211,35 @@ Net6=NetName=_RS485_P|NetColor=$00751C35
 Net7=NetName=_RS485_R/W|NetColor=$00DCA86F
 Net8=NetName=_RS485_RX|NetColor=$00DCA86F
 Net9=NetName=_RS485_TX|NetColor=$00DCA86F
-Net10=NetName=+3V3|NetColor=$000099FF
-Net11=NetName=BOOT|NetColor=clLime
-Net12=NetName=CAN_RX|NetColor=$00DCA86F
-Net13=NetName=CAN_RXD|NetColor=clBlue
-Net14=NetName=CAN_TX|NetColor=$00DCA86F
-Net15=NetName=CAN_TXD|NetColor=clBlue
-Net16=NetName=CANH_P|NetColor=clBlue
-Net17=NetName=CANL_N|NetColor=clBlue
-Net18=NetName=ESP_LED|NetColor=clLime
-Net19=NetName=GND|NetColor=$00134E27
-Net20=NetName=MCP_CS|NetColor=$00DCA86F
-Net21=NetName=MCP_INT|NetColor=$00DCA86F
-Net22=NetName=MCP_MISO|NetColor=$00DCA86F
-Net23=NetName=MCP_MOSI|NetColor=$00DCA86F
-Net24=NetName=MCP_RST|NetColor=$00DCA86F
-Net25=NetName=MCP_SCK|NetColor=$00DCA86F
-Net26=NetName=OSC1|NetColor=clFuchsia
-Net27=NetName=OSC2|NetColor=clFuchsia
-Net28=NetName=RS485_A|NetColor=clBlue
-Net29=NetName=RS485_B|NetColor=clBlue
-Net30=NetName=RS485_N|NetColor=clBlue
-Net31=NetName=RS485_P|NetColor=clBlue
-Net32=NetName=RS485_R/W|NetColor=$00DCA86F
-Net33=NetName=RS485_RX|NetColor=$00DCA86F
-Net34=NetName=RS485_TX|NetColor=$00DCA86F
-Net35=NetName=RXDO|NetColor=clBlue
-Net36=NetName=TXDO|NetColor=clBlue
+Net10=NetName=+24V_IN|NetColor=$00FF0099
+Net11=NetName=+24V_OUT|NetColor=clFuchsia
+Net12=NetName=+3V3|NetColor=$000099FF
+Net13=NetName=BOOT|NetColor=clLime
+Net14=NetName=CAN_RX|NetColor=$00DCA86F
+Net15=NetName=CAN_RXD|NetColor=clBlue
+Net16=NetName=CAN_TX|NetColor=$00DCA86F
+Net17=NetName=CAN_TXD|NetColor=clBlue
+Net18=NetName=CANH_P|NetColor=clBlue
+Net19=NetName=CANL_N|NetColor=clBlue
+Net20=NetName=ESP_LED|NetColor=clLime
+Net21=NetName=GND|NetColor=$00134E27
+Net22=NetName=MCP_CS|NetColor=$00DCA86F
+Net23=NetName=MCP_INT|NetColor=$00DCA86F
+Net24=NetName=MCP_MISO|NetColor=$00DCA86F
+Net25=NetName=MCP_MOSI|NetColor=$00DCA86F
+Net26=NetName=MCP_RST|NetColor=$00DCA86F
+Net27=NetName=MCP_SCK|NetColor=$00DCA86F
+Net28=NetName=OSC1|NetColor=clFuchsia
+Net29=NetName=OSC2|NetColor=clFuchsia
+Net30=NetName=RS485_A|NetColor=clBlue
+Net31=NetName=RS485_B|NetColor=clBlue
+Net32=NetName=RS485_N|NetColor=clBlue
+Net33=NetName=RS485_P|NetColor=clBlue
+Net34=NetName=RS485_R/W|NetColor=$00DCA86F
+Net35=NetName=RS485_RX|NetColor=$00DCA86F
+Net36=NetName=RS485_TX|NetColor=$00DCA86F
+Net37=NetName=RXDO|NetColor=clBlue
+Net38=NetName=TXDO|NetColor=clBlue
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
